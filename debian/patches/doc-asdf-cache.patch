@@ -1,0 +1,22 @@
+Description: Use custom directory for ASDF cache when building documentation
+ On build daemons, HOME is set to a non-existent directory.
+Author: Sébastien Villemot <sebastien@debian.org>
+Forwarded: not-needed
+Last-Update: 2018-04-22
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/doc/Makefile
++++ b/doc/Makefile
+@@ -10,10 +10,11 @@ clean-crap:
+ 
+ clean: clean-include
+ 	rm -f  *.pdf *.html *.info
++	rm -rf cache
+ 
+ include:
+ 	sbcl --no-userinit --eval '(require :asdf)' \
+-	--eval '(let ((asdf:*central-registry* (list "../"))) (require :alexandria))' \
++	--eval '(let ((asdf:*user-cache* #p"$(CURDIR)/cache/") (asdf:*central-registry* (list "../"))) (require :alexandria))' \
+ 	--eval '(with-compilation-unit () (load "docstrings.lisp"))' \
+ 	--eval '(sb-texinfo:generate-includes "include/" (list :alexandria-1 :alexandria-2) :base-package :alexandria)' \
+ 	--eval '(quit)'

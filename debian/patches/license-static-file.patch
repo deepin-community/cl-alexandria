@@ -1,0 +1,21 @@
+Description: Remove static LICENSE file
+ This file is not shipped per Debian policies, and this triggers an ASDF
+ warning.
+Author: Sébastien Villemot <sebastien@debian.org>
+Bug-Debian: https://bugs.debian.org/787420
+Forwarded: not-needed
+Last-Update: 2018-04-22
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/alexandria.asd
++++ b/alexandria.asd
+@@ -40,8 +40,7 @@ the following constraints:
+    split-sequence. Instead, third party packages such as that may be
+    \"blessed\"."
+   :components
+-  ((:static-file "LICENCE")
+-   (:module "alexandria-1"
++  ((:module "alexandria-1"
+             :components ((:static-file "tests.lisp")
+                          (:file "package")
+                          (:file "definitions" :depends-on ("package"))

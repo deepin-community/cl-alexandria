@@ -1,0 +1,176 @@
+cl-alexandria (20211025.gita67c3a6-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set upstream metadata fields: Bug-Submit.
+
+  [ Sébastien Villemot ]
+  * New upstream snapshot
+  * Update standards version to 4.6.0, no changes needed.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Thu, 04 Nov 2021 20:58:20 +0100
+
+cl-alexandria (20200821.gitf35e232-1) unstable; urgency=medium
+
+  [ Sébastien Villemot ]
+  * New upstream release
+  * doc-lambda-list-keywords.patch: drop patch, no longer needed
+  * Bump to debhelper 13
+  * Bump to S-V 4.5.1
+  * d/upstream/metadata: add a few more fields
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set upstream metadata fields: Repository.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 24 Nov 2020 14:28:54 +0100
+
+cl-alexandria (20200125.gitfab0e59-1) unstable; urgency=medium
+
+  * New upstream snapshot
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sat, 08 Feb 2020 14:11:08 +0100
+
+cl-alexandria (20200110.gitfc2a2f5-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Bump to debhelper compat level 12
+  * Bump to S-V 4.5.0
+
+ -- Sébastien Villemot <sebastien@debian.org>  Tue, 21 Jan 2020 22:19:02 +0100
+
+cl-alexandria (20181203.gitd44f543-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Bump to S-V 4.3.0
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 23 Dec 2018 20:35:28 +0100
+
+cl-alexandria (20181119.git50d6698-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Actually fail autopkgtest on test failure.
+  * clisp-test-failure: new patch, disable a test on clisp
+  * Migrate to new way of specifying debhelper compat level
+  * Add Rules-Requires-Root: no
+  * Bump to S-V 4.2.1
+
+ -- Sébastien Villemot <sebastien@debian.org>  Mon, 19 Nov 2018 17:32:10 +0100
+
+cl-alexandria (20170814.gite5c54bc-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Remove Dimitri Fontaine from Uploaders. Thanks Dimitri for your work
+    on this package!
+  * Remove useless ${shlibs:Depends}, since this is an arch:all package.
+  * Add cl-rt to Recommends, for running the testsuite.
+  * Remove obsolete README.Debian.
+  * Bump to debhelper compat level 11.
+  * Rewrite d/rules using dh.
+  * Bump S-V to 4.1.4.
+  * Mark the package as M-A foreign.
+  * Ship README.
+  * Ship HTML, PDF and Info manual.
+    + also register them into doc-base.
+    + doc-asdf-cache.patch, doc-lambda-list-keywords.patch: new patches.
+    + add texinfo, sbcl and texlive-latex-base to Build-Depends.
+  * Rewrite d/copyright in machine-readable format 1.0.
+  * Add myself to Uploaders.
+  * license-static-file.patch: new patch, removes LICENSE from the .asd.
+    (Closes: #787420)
+  * Add an autopkgtest that runs the testsuite on sbcl, ecl and clisp.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 22 Apr 2018 16:01:20 +0200
+
+cl-alexandria (20170630-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update Vcs-* fields for move to salsa.
+  * Set Maintainer to debian-common-lisp@l.d.o.
+  * Remove Build-Depends on dh-lisp.
+  * Use secure URL in Homepage field.
+  * Create d/watch, using uscan git mode.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Wed, 04 Apr 2018 21:33:52 +0200
+
+cl-alexandria (20170630-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Thu, 06 Jul 2017 16:27:04 +0300
+
+cl-alexandria (20161031-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Sun, 20 Nov 2016 19:44:39 +0300
+
+cl-alexandria (20160825-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Mon, 29 Aug 2016 21:55:04 +0300
+
+cl-alexandria (20150505-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Wed, 06 May 2015 20:35:34 +0300
+
+cl-alexandria (20140826-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Mon, 15 Sep 2014 01:01:34 +0400
+
+cl-alexandria (20140713-2) unstable; urgency=medium
+
+  * Fix package name in debian/rules, Closes: #758836
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Fri, 22 Aug 2014 11:44:16 +0400
+
+cl-alexandria (20140713-1) unstable; urgency=medium
+
+  * Quicklisp release update.
+
+ -- Dimitri Fontaine <dim@tapoueh.org>  Tue, 19 Aug 2014 16:20:57 +0400
+
+cl-alexandria (0.0.20130703-1) unstable; urgency=low
+
+  * New upstream
+
+ -- Christoph Egger <christoph@debian.org>  Wed, 03 Jul 2013 13:37:00 +0200
+
+cl-alexandria (0.0.20121214-1) experimental; urgency=low
+
+  [ Peter Van Eynde ]
+  * open for changes
+
+  [ Christoph Egger ]
+  * New upstream
+  * We're now using git
+    * Couldn't both track upstream git and import debian history. The
+      repository follows upstream, Debian changes lost in the transition
+  * Add me to uploaders
+
+ -- Christoph Egger <christoph@debian.org>  Fri, 14 Dec 2012 15:23:22 -0800
+
+cl-alexandria (0.0.20100217-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed typo in description.  (Closes: #563767)
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Tue, 02 Mar 2010 08:19:13 +0100
+
+cl-alexandria (0.0.20091125-1) unstable; urgency=low
+
+  * New upstream with minor changes.
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Thu, 31 Dec 2009 14:39:35 +0100
+
+cl-alexandria (0.0.20091101-1) unstable; urgency=low
+
+  * First packaged.
+  * Added dummy watch file
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Sat, 07 Nov 2009 14:03:49 +0100

@@ -1,0 +1,18 @@
+Document: cl-alexandria
+Title: Alexandria Manual
+Abstract: Alexandria is a collection of utilities for Common Lisp. It is a
+ library but also a project that aims to reduce duplication of effort and
+ improve portability of Common Lisp code according to its own idiosyncratic and
+ rather conservative aesthetic.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/cl-alexandria/alexandria.html
+Files: /usr/share/doc/cl-alexandria/alexandria.html
+
+Format: PDF
+Files: /usr/share/doc/cl-alexandria/alexandria.pdf.gz
+
+Format: Info
+Index: /usr/share/info/alexandria.info.gz
+Files: /usr/share/info/alexandria.info*.gz
